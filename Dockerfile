@@ -1,0 +1,7 @@
+FROM node:16.13-alpine
+WORKDIR /app
+COPY . .
+RUN npm i
+ENV TOKEN=c186c30450a61d9b3ac71748ac9b866bb477e945
+EXPOSE 3000
+CMD npm start
