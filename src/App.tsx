@@ -6,7 +6,7 @@ import './App.css';
 function App() {
   const [products, attributes, fetchState, getProducts] = useGetProducts(window.location.pathname);
   const btnOnClick = () => getProducts();
-  //componentizar
+
   return (
     <div className="container">
       <h1>React TypeScript API hooks</h1>
