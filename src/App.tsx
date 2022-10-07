@@ -2,10 +2,10 @@ import { useGetProducts } from './lib/api-hooks';
 import { FetchState } from './types';
 import './App.css';
 
+
 function App() {
   const [products, attributes, fetchState, getProducts] = useGetProducts(window.location.pathname);
   const btnOnClick = () => getProducts();
-
   //componen
   return (
     <div className="container">

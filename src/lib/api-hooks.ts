@@ -11,10 +11,10 @@ export function useGetProducts(url: any) {
     try {
       setFetchState(FetchState.LOADING);
       //colocar a url na .env, colocar o cod abaixo em um componente
-      const res = await axios.get(`https://poc-backend-new-web.eks.pub.live.dafiti.io/product/getByUrl${url}`, { headers: { 'token': process.env.REACT_APP_TOKEN } })
+      const res = await axios.get(`${process.env.REACT_APP_BASE_URL}${url}`, { headers: { 'token': process.env.REACT_APP_TOKEN } })
       const resData = res.data as Array<ProductData>;
       const resAttributes = res.data.attributes as Array<AttributesData>;
-
+      
       setProducts(resData);
       setAttributes(resAttributes);
 
